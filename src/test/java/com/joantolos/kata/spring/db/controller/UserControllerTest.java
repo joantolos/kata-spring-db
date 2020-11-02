@@ -22,12 +22,13 @@ public class UserControllerTest {
     private MockMvc mockMvc;
 
     @Test
-    public void shouldPing() throws Exception {
+    public void shouldGetAllUsers() throws Exception {
 
         this.mockMvc
                 .perform(get("/users"))
                 .andDo(print())
                 .andExpect(status().isOk());
+//                .andExpect(jsonPath("$.totalHits").value("1"));
     }
 
 }

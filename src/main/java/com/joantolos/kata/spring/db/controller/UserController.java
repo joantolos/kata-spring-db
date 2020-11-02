@@ -30,20 +30,20 @@ public class UserController {
     public ResponseEntity addUser(@RequestBody User user) {
         log.info("### POST /users endpoint called");
         this.userService.addUser(user);
-        return ResponseEntity.status(HttpStatus.OK).build();
+        return ResponseEntity.status(HttpStatus.CREATED).build();
     }
 
     @RequestMapping(value = "/users", method = RequestMethod.DELETE)
     public ResponseEntity deleteUser(@RequestBody User user) {
         log.info("### DELETE /users endpoint called");
         this.userService.deleteUser(user);
-        return ResponseEntity.status(HttpStatus.OK).build();
+        return ResponseEntity.status(HttpStatus.ACCEPTED).build();
     }
 
     @RequestMapping(value = "/users", method = RequestMethod.PUT)
     public ResponseEntity updateUser(@RequestBody User user) {
         log.info("### PUT /users endpoint called");
         this.userService.updateUser(user);
-        return ResponseEntity.status(HttpStatus.OK).build();
+        return ResponseEntity.status(HttpStatus.CREATED).build();
     }
 }
