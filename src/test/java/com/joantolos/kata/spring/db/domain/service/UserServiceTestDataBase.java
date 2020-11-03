@@ -1,6 +1,6 @@
 package com.joantolos.kata.spring.db.domain.service;
 
-import com.joantolos.kata.spring.db.InMemoryDataBaseTest;
+import com.joantolos.kata.spring.db.InMemoryTestDataBase;
 import com.joantolos.kata.spring.db.domain.dao.User;
 import org.junit.After;
 import org.junit.Assert;
@@ -19,7 +19,7 @@ import java.io.IOException;
 @RunWith(SpringRunner.class)
 @SpringBootTest
 @AutoConfigureMockMvc
-public class UserServiceTest extends InMemoryDataBaseTest {
+public class UserServiceTestDataBase extends InMemoryTestDataBase {
 
     @Autowired
     private UserService userService;

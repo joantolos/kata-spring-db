@@ -8,7 +8,7 @@ import java.io.IOException;
 import java.io.InputStream;
 import java.io.InputStreamReader;
 
-public class InMemoryDataBaseTest {
+public class InMemoryTestDataBase {
 
     @Autowired
     private EntityManager entityManager;
