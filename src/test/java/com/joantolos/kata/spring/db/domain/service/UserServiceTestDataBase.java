@@ -71,4 +71,11 @@ public class UserServiceTestDataBase extends InMemoryTestDataBase {
         userService.deleteUser(new User("luke"));
         Assert.assertNull(userService.getUser("luke"));
     }
+
+    @Test
+    @Modifying
+    @Transactional
+    public void shouldFindUserById() {
+        userService.findById("luke").ifPresent(user -> Assert.assertEquals("123", user.getPassword()));
+    }
 }

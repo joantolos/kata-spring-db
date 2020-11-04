@@ -1,5 +1,29 @@
 # kata-spring-db
 
+A simple seed TDD ready with Java, Spring and JPA.
+
+## Starting the app on localhost
+
+Run:
+
+    ./gradlew clean build
+
+You will find the test coverage report at: /build/jacocoHtml/index.html
+
+1. You can run directly the jar file:
+
+    java -jar build/libs/kata-spring-db-1.0.0.jar
+    
+2. Or you can run the bootRun task from gradle:
+
+    ./gradlew bootRun
+    
+3. Or you can run the main class located on com.joantolos.kata.spring.db.KataSpringDBApp on you IDE
+
+Once the app is running, you can access it on localhost:8080
+
+Swagger is included and accessible in: http://localhost:8080/swagger-ui.html#/ where you can try out the features.
+
 ## Database password encryption
 
 Using the library [Jasypt](http://www.jasypt.org/ "Jasypt's Homepage") to encrypt the database password. The steps to use it are the following:

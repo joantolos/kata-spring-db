@@ -8,12 +8,7 @@ import org.springframework.data.jpa.repository.Query;
 import org.springframework.data.repository.query.Param;
 import org.springframework.transaction.annotation.Transactional;
 
-import java.util.List;
-
 public interface UserRepository extends JpaRepository<User, UserId> {
-
-    @Query(value = "SELECT * FROM users;", nativeQuery = true)
-    List<User> findAllUsers();
 
     @Query(value = "SELECT * FROM users WHERE username = :username", nativeQuery = true)
     User findUser(@Param("username") String username);

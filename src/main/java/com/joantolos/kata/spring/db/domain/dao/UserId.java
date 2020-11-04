@@ -10,4 +10,8 @@ public class UserId implements Serializable {
     private String username;
 
     public UserId() {}
+
+    public UserId(String username) {
+        this.username = username;
+    }
 }
