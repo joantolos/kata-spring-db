@@ -1,6 +1,6 @@
 # kata-spring-db
 
-A simple seed TDD ready with Java, Spring and JPA.
+A simple seed TDD ready with Java, Spring and JPA. Used as case study explained on: http://www.joantolos.com/blog/java_spring_hibernate_postgres/
 
 ## Starting the app on localhost
 
